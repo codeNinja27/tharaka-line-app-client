@@ -2,7 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 
-import LoginForm from './login_page';
+import LoginForm from './login_form';
+import Register from './registration_page';
 
 export function LandingPage(props) {
     // If we are logged in redirect straight to the user's dashboard
@@ -14,7 +15,7 @@ export function LandingPage(props) {
         <div className="home">
             <h2>Welcome to Line App</h2>
             <LoginForm />
-            {/* <Link to="/register">Register</Link> */}
+            <Link to="/register">Register</Link>
         </div>
     );
 }
