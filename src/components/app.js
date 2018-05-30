@@ -4,7 +4,7 @@ import {Route, withRouter} from 'react-router-dom';
 
 // import HeaderBar from './header-bar';
 import Main from './main_page';
-// import Dashboard from './dashboard';
+import Userpage from './user_page';
 import RegistrationPage from './registration_page';
 import {refreshAuthToken, clearAuth} from '../actions/auth';
 
@@ -64,7 +64,7 @@ export class App extends React.Component {
             <div className="app">
                 {/* <HeaderBar /> */}
                 <Route exact path="/" component={Main} />
-                {/* <Route exact path="/dashboard" component={Dashboard} /> */}
+                <Route exact path="/user" component={Userpage} />
                 <Route exact path="/register" component={RegistrationPage} />
             </div>
         );
