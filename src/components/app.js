@@ -5,6 +5,7 @@ import {Route, withRouter} from 'react-router-dom';
 // import HeaderBar from './header-bar';
 import Main from './main_page';
 import Userpage from './user_page';
+import Events from './event_page';
 import RegistrationPage from './registration_page';
 import {refreshAuthToken, clearAuth} from '../actions/auth';
 
@@ -65,6 +66,7 @@ export class App extends React.Component {
                 {/* <HeaderBar /> */}
                 <Route exact path="/" component={Main} />
                 <Route exact path="/user" component={Userpage} />
+                <Route exact path="/events" component={Events} />
                 <Route exact path="/register" component={RegistrationPage} />
             </div>
         );

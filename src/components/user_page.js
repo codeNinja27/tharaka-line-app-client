@@ -12,7 +12,8 @@ export function UserPage(props) {
     }
     return (
         <div className="userHome">
-            <h2>Home Page</h2>
+            <h2>My Events</h2>
+            <Link to="/events">Events</Link>
         </div>
     );
 }
