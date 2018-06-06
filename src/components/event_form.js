@@ -7,7 +7,8 @@ import './event_form.css';
 
 export class EventForm extends React.Component {
     onSubmit(values) {
-        return this.props.dispatch(postEvents(values.title, values.hours, values.pay));
+        this.props.dispatch(postEvents(values.title, values.hours, values.pay));
+        this.props.reset();//Clearing input fields
     }
 
     render() {

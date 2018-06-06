@@ -27,11 +27,11 @@ export const removeEventSuccess = eventId => ({
     eventId
 });
 
-// export const UPDATE_EVENT_SUCCESS = 'UPDATE_EVENT_SUCCESS';
-// export const updateEventSuccess = updateEvent => ({
-//     type: UPDATE_EVENT_SUCCESS,
-//     updateEvent
-// });
+export const UPDATED_EVENT_SUCCESS = 'UPDATED_EVENT_SUCCESS';
+export const updatedEventSuccess = updatedEvent => ({
+    type: UPDATED_EVENT_SUCCESS,
+    updatedEvent
+});
 
 
 //GET ALL EVENTS
@@ -143,7 +143,7 @@ export const postEvents = (title, hours, pay) => (dispatch, getState) => {
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
-        // .then(updateEvent => dispatch(updateEventSuccess(updateEvent)))
+        .then(updatedEvent => dispatch(updatedEventSuccess(updatedEvent)))
         .catch(err => {
             const {reason, message, location} = err;
             if (reason === 'ValidationError') {
