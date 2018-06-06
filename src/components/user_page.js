@@ -22,11 +22,14 @@ export class UserPage extends React.Component {
         }
         return (
             <div className="userHome">
+                
+                <div className="userHeaderDiv">
+                    <Link className="eventLink" to="/events">Events</Link>
+                    <Link className="userLogoutLink" onClick={() => this.logOut()} to="/" >Logout</Link>
+                </div>
                 <h2>My Events</h2>
                 <UserEventList />
                 <EventForm />
-                <Link to="/events">Events</Link><br></br>
-                <Link onClick={() => this.logOut()} to="/" >Logout</Link>
             </div>
         );
     }

@@ -3,6 +3,7 @@ import {Field, reduxForm, focus} from 'redux-form';
 import Input from './input';
 import {postEvents} from '../actions/events';
 import {required, nonEmpty} from '../validators';
+import './event_form.css';
 
 export class EventForm extends React.Component {
     onSubmit(values) {
@@ -34,7 +35,7 @@ export class EventForm extends React.Component {
             );
         }
         return (
-            <div className="event-container">
+            <div className="eventFormContainer">
                 <h3>Post an Event</h3>
                 <form
                     className="event-form"

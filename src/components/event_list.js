@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 // import {Link, Redirect} from 'react-router-dom';
 import { getEvents } from '../actions/events';
 import {acceptUserEvents} from '../actions/events';
+import './event_list.css';
 
 
 export class EventList extends React.Component {
@@ -45,7 +46,7 @@ export class EventList extends React.Component {
         });
 
         return (
-            <div className="userHome">
+            <div className="fullEventList">
                 <ul>
                     {events} 
                 </ul>

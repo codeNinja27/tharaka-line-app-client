@@ -1,6 +1,7 @@
 .userHome {
     display: inline-block;
     width: 100%;
+    margin: 10px;
 }
 
 ul {
@@ -9,4 +10,8 @@ ul {
 
 h2 {
     text-align: center;
+}
+
+.userLogoutLink {
+    float: right;
 }

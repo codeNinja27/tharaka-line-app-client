@@ -3,8 +3,7 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import EventList from './event_list';
 import {logout} from '../actions/auth';
-
-// import RegistrationForm from './registration_form';
+import './event_page.css';
 
 export class EventPage extends React.Component {
 
@@ -19,10 +18,14 @@ export class EventPage extends React.Component {
         // }
         return (
             <div className="userHome">
-                <h2>Events</h2>
-                <EventList />
-                <Link to="/user">My Events</Link><br></br>
-                <Link onClick={() => this.logOut()} to="/" >Logout</Link>
+                <div className="headerDiv">
+                    <Link className="userEventLink" to="/user">My Events</Link>
+                    <Link className="logoutLink" onClick={() => this.logOut()} to="/" >Logout</Link>
+                </div>
+                <div className="eventHolder">
+                    <h2>Events</h2>
+                    <EventList />
+                </div>
             </div>
         );
     }
