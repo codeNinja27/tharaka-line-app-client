@@ -39,7 +39,7 @@ const storeAuthInfo = (authToken, dispatch) => {
     const decodedToken = jwtDecode(authToken);
     dispatch(setAuthToken(authToken));
     dispatch(authSuccess(decodedToken.user));
-    // saveAuthToken(authToken);
+    saveAuthToken(authToken);//to store the token in local storage
 };
 
 export const login = (username, password) => dispatch => {
@@ -78,7 +78,14 @@ export const login = (username, password) => dispatch => {
     );
 };
 
+
+export const logout = () => dispatch => {
+    dispatch(clearAuth());
+    clearAuthToken();//If you stored the token in loval storage remove it
+};
+
 export const refreshAuthToken = () => (dispatch, getState) => {
+    console.log('REFRESH');
     dispatch(authRequest());
     const authToken = getState().auth.authToken;
     return fetch(`${API_BASE_URL}/auth/refresh`, {

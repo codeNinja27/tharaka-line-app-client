@@ -1,21 +1,35 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
+import UserEventList from './user_event_list';
+import EventForm from './event_form';
+import {logout} from '../actions/auth';
+import './user_page.css';
 
 // import RegistrationForm from './registration_form';
 
-export function UserPage(props) {
+export class UserPage extends React.Component {
+
     // If we are logged in (which happens automatically when registration
     // is successful) redirect to the user's dashboard
-    if (props.loggedIn) {
-        return <Redirect to="/user" />;//Events or Userpage
+    logOut() {
+        this.props.dispatch(logout());
     }
-    return (
-        <div className="userHome">
-            <h2>My Events</h2>
-            <Link to="/events">Events</Link>
-        </div>
-    );
+
+    render() {
+        if (this.props.loggedIn) {
+            return <Redirect to="/user" />;//Events or Userpage
+        }
+        return (
+            <div className="userHome">
+                <h2>My Events</h2>
+                <UserEventList />
+                <EventForm />
+                <Link to="/events">Events</Link><br></br>
+                <Link onClick={() => this.logOut()} to="/" >Logout</Link>
+            </div>
+        );
+    }
 }
 
 const mapStateToProps = state => ({
