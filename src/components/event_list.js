@@ -49,9 +49,9 @@ export class EventList extends React.Component {
         const events = this.props.events.map((singleEvent, index) => {
             return (
                 <li key={index}>
-                    <span>title: {singleEvent.title}</span>
-                    <span>hours: {singleEvent.hours}</span>
-                    <span>pay: {singleEvent.pay}</span>
+                    <span>Title: {singleEvent.title}</span>
+                    <span>Hours: {singleEvent.hours}</span>
+                    <span>Pay: {singleEvent.pay}</span>
                     {(singleEvent.acceptUserId === "") && (singleEvent.userId !== this.props.currentUser._id) &&//instead of "" use null in the backend schema
                         <button onClick={ () => { this.onEventClick(singleEvent)} }>Accept</button>
                     }

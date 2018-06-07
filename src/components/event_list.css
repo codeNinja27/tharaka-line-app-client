@@ -1,6 +1,8 @@
-/* .fullEventList {
+.fullEventList {
     display: inline-block;
-} */
+    border: 0.5em solid black;
+    width: 100%;
+}
 
 /* .eventContent {
     margin-right: 5px;
