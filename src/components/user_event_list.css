@@ -3,6 +3,7 @@
     width: 100%;
     display: inline-block;
     border: 0.5em groove black;
+    border-radius: 1%;
     overflow: auto;
 }
 
@@ -10,7 +11,17 @@
     width: 100%;
     float: right;
     border: 0.5em groove black;
+    border-radius: 1%;
     overflow: auto;
+}
+
+.removeButton {
+    float: right;
+    margin-right: 12%;
+}
+
+.userEventListItem {
+    line-height: 1.6;
 }
 
 h3 {
@@ -20,6 +31,7 @@ h3 {
 span {
     margin: 10px 0px 10px 15px;
 }
+
 
 
 @media (min-width: 500px) {

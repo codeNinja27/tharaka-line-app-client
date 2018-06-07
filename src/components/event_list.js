@@ -48,7 +48,7 @@ export class EventList extends React.Component {
         // });
         const events = this.props.events.map((singleEvent, index) => {
             return (
-                <li key={index}>
+                <li className="eventListItem" key={index}>
                     <span>Title: {singleEvent.title}</span>
                     <span>Hours: {singleEvent.hours}</span>
                     <span>Pay: {singleEvent.pay}</span>
@@ -61,7 +61,7 @@ export class EventList extends React.Component {
 
         return (
             <div className="fullEventList">
-                <ul>
+                <ul className="eventUlList">
                     {events} 
                 </ul>
             </div>

@@ -27,12 +27,12 @@ export class UserEventList extends React.Component {
     
             ownedEventsJsx = ownedEvents.map((singleEvent, index) => {
                 const item =  
-                    <li key={index}>
+                    <li className="userEventListItem" key={index}>
                         <span>Title: {singleEvent.title}</span>
                         <span>Hours: {singleEvent.hours}</span>
                         <span>Pay: {singleEvent.pay}</span>
             
-                        <button onClick={ () => { this.onEventRemoveClick(singleEvent)} }>Remove</button>
+                        <button className="removeButton" onClick={ () => { this.onEventRemoveClick(singleEvent)} }>Remove</button>
                     </li> 
     
                 return item;
@@ -40,7 +40,7 @@ export class UserEventList extends React.Component {
 
             acceptedEventsJsx = accpetedEvents.map((singleEvent, index) => {//Add remove function here to accpt too but this will only change the acceptUserId to null
                 const item =  
-                    <li key={index}>
+                    <li className="userEventListItem" key={index}>
                         <span>Title: {singleEvent.title}</span>
                         <span>Hours: {singleEvent.hours}</span>
                         <span>Pay: {singleEvent.pay}</span>

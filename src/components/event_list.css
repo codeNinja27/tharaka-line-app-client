@@ -3,7 +3,12 @@
     border: 0.5em solid black;
     width: 100%;
 }
+ .eventUlList {
+    padding: 0;
+    text-align: left;
+    overflow: auto;
+ }
 
-/* .eventContent {
-    margin-right: 5px;
-} */
+ .eventListItem {
+    line-height: 1.6;
+ }
