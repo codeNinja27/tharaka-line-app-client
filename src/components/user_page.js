@@ -29,7 +29,9 @@ export class UserPage extends React.Component {
                 </div>
                 <h2>My Events</h2>
                 <UserEventList />
-                <EventForm />
+                <div className="eventForm">
+                    <EventForm />
+                </div>
             </div>
         );
     }

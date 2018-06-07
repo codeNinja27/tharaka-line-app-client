@@ -28,9 +28,9 @@ export class UserEventList extends React.Component {
             ownedEventsJsx = ownedEvents.map((singleEvent, index) => {
                 const item =  
                     <li key={index}>
-                        <span>title: {singleEvent.title}</span>
-                        <span>hours: {singleEvent.hours}</span>
-                        <span>pay: {singleEvent.pay}</span>
+                        <span>Title: {singleEvent.title}</span>
+                        <span>Hours: {singleEvent.hours}</span>
+                        <span>Pay: {singleEvent.pay}</span>
             
                         <button onClick={ () => { this.onEventRemoveClick(singleEvent)} }>Remove</button>
                     </li> 
@@ -41,9 +41,9 @@ export class UserEventList extends React.Component {
             acceptedEventsJsx = accpetedEvents.map((singleEvent, index) => {//Add remove function here to accpt too but this will only change the acceptUserId to null
                 const item =  
                     <li key={index}>
-                        <span>title: {singleEvent.title}</span>
-                        <span>hours: {singleEvent.hours}</span>
-                        <span>pay: {singleEvent.pay}</span>
+                        <span>Title: {singleEvent.title}</span>
+                        <span>Hours: {singleEvent.hours}</span>
+                        <span>Pay: {singleEvent.pay}</span>
                     </li> 
     
                 return item;
@@ -83,14 +83,18 @@ export class UserEventList extends React.Component {
 
         return (
             <div className="userEventList">
-                <h3>My Posted Events</h3>
-                <ul>
-                    {ownedEventsJsx} 
-                </ul>
-                <h3>My Accepted Events</h3>
-                <ul>
-                    {acceptedEventsJsx} 
-                </ul>
+                <div className="userPostedEvents">
+                    <h3>My Posted Events</h3>
+                    <ul>
+                        {ownedEventsJsx} 
+                    </ul>
+                </div>
+                <div className="userAcceptedEvents">
+                    <h3>My Accepted Events</h3>
+                    <ul>
+                        {acceptedEventsJsx} 
+                    </ul>
+                </div>
             </div>
         );
     }
