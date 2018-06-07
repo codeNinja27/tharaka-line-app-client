@@ -75,12 +75,21 @@ export class App extends React.Component {
     // }
 
     render() {
+        let UserpageRoute, EventsRoute
+        if(this.props.loggedIn) {
+            UserpageRoute = <Route exact path="/user" component={Userpage} />;
+            EventsRoute = <Route exact path="/events" component={Events} />;
+        } else {
+            UserpageRoute =  <Route exact path="/user"  component={Main} />
+            EventsRoute = <Route exact path="/events" component={Main} />
+        }
         return (
             <div className="app">
-                {/* <HeaderBar /> */}
                 <Route exact path="/" component={Main} />
-                <Route exact path="/user" component={Userpage} />
-                <Route exact path="/events" component={Events} />
+                {UserpageRoute}
+                {EventsRoute}
+                {/* <Route exact path="/user" component={Userpage} />
+                <Route exact path="/events" component={Events} /> */}
                 <Route exact path="/register" component={RegistrationPage} />
             </div>
         );

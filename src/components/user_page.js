@@ -5,6 +5,7 @@ import UserEventList from './user_event_list';
 import EventForm from './event_form';
 import {logout} from '../actions/auth';
 import './user_page.css';
+import logo from '../logo.png';
 
 // import RegistrationForm from './registration_form';
 
@@ -26,6 +27,7 @@ export class UserPage extends React.Component {
                 <div className="userHeaderDiv">
                     <Link className="eventLink" to="/events">Events</Link>
                     <Link className="userLogoutLink" onClick={() => this.logOut()} to="/" >Logout</Link>
+                    <div className="logoDiv" ><img src={logo} alt="logo" /></div>
                 </div>
                 <h2>My Events</h2>
                 <UserEventList />

@@ -28,9 +28,9 @@ export class UserEventList extends React.Component {
             ownedEventsJsx = ownedEvents.map((singleEvent, index) => {
                 const item =  
                     <li className="userEventListItem" key={index}>
-                        <span>Title: {singleEvent.title}</span>
-                        <span>Hours: {singleEvent.hours}</span>
-                        <span>Pay: {singleEvent.pay}</span>
+                        <span className="userTitleSpan" >{singleEvent.title}</span>
+                        <span className="userHoursSpan" >{singleEvent.hours}</span>
+                        <span className="userPaySpan" >${singleEvent.pay}</span>
             
                         <button className="removeButton" onClick={ () => { this.onEventRemoveClick(singleEvent)} }>Remove</button>
                     </li> 
@@ -41,9 +41,9 @@ export class UserEventList extends React.Component {
             acceptedEventsJsx = accpetedEvents.map((singleEvent, index) => {//Add remove function here to accpt too but this will only change the acceptUserId to null
                 const item =  
                     <li className="userEventListItem" key={index}>
-                        <span>Title: {singleEvent.title}</span>
-                        <span>Hours: {singleEvent.hours}</span>
-                        <span>Pay: {singleEvent.pay}</span>
+                        <span className="userTitleSpan" >{singleEvent.title}</span>
+                        <span className="userHoursSpan" >{singleEvent.hours}</span>
+                        <span className="userPaySpan" >${singleEvent.pay}</span>
                     </li> 
     
                 return item;
@@ -85,13 +85,24 @@ export class UserEventList extends React.Component {
             <div className="userEventList">
                 <div className="userPostedEvents">
                     <h3>My Posted Events</h3>
-                    <ul>
+                    <ul className="userPostedUl" >
+                        <li>
+                            <span className="userMainTitle" >Title</span>
+                            <span className="userMainHours" >Hours</span>
+                            <span className="userMainPay" >Pay</span>
+                            <span className="userMainStatus" >Status</span>
+                        </li>
                         {ownedEventsJsx} 
                     </ul>
                 </div>
                 <div className="userAcceptedEvents">
                     <h3>My Accepted Events</h3>
-                    <ul>
+                    <ul className="userAcceptedUl" >
+                        <li>
+                            <span className="userMainTitle" >Title</span>
+                            <span className="userMainHours" >Hours</span>
+                            <span className="userMainPay" >Pay</span>
+                        </li>
                         {acceptedEventsJsx} 
                     </ul>
                 </div>

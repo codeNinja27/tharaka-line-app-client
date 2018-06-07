@@ -2,23 +2,62 @@
 .userPostedEvents {
     width: 100%;
     display: inline-block;
-    border: 0.5em groove black;
+    border: 0.3em solid black;
     border-radius: 1%;
     overflow: auto;
+    background:rgba(255,255,255,0.5);
 }
 
 .userAcceptedEvents {
     width: 100%;
     float: right;
-    border: 0.5em groove black;
+    border: 0.3em solid black;
     border-radius: 1%;
     overflow: auto;
+    background:rgba(255,255,255,0.5);
 }
+
+.userMainTitle, .userMainHours, .userMainPay, userMainStatus {
+    font-weight: bold;
+    display: inline-block;
+    width: 15%;
+    color: black;
+}
+
+.userTitleSpan, .userHoursSpan, .userPaySpan, .removeButton {
+    font-weight: bold;
+    display: inline-block;
+    width: 15%;
+    color: black;
+ }
+
+.userHoursSpan, .userMainHours {
+    padding-left: 15%;
+}
+
+.userPaySpan, .userMainPay {
+    padding-left: 15%;
+ }
+
+.userMainStatus{
+    margin-right: 3%;
+    font-weight: bold;
+    color: black;
+    float: right;
+ }
 
 .removeButton {
     float: right;
-    margin-right: 12%;
+    /* margin-right: 15%; */
+    color: #871c18;
+    padding: 5px;
+    border: 2px solid #871c18;
+    overflow: auto;
+    /* background-color: #c6a5a5; */
+    border-radius: 8%;
+    width: auto;
 }
+
 
 .userEventListItem {
     line-height: 1.6;
@@ -33,10 +72,88 @@ span {
 }
 
 
+@media (min-width: 325px) {
+    .userPostedEvents, .userAcceptedEvents {
+        width: 100%;
+        overflow: auto;
+        padding: 0;
+    }
+    .userAcceptedUl{
+        font-size: 10px;
+    }
+    .userPostedUl{
+        font-size: 10px;
+    }
 
-@media (min-width: 500px) {
+    .userMainTitle, .userMainHours, .userMainPay, userMainStatus {
+        font-weight: bold;
+        display: inline-block;
+        width: 5%;
+        color: black;
+    }
+    
+    .userTitleSpan, .userHoursSpan, .userPaySpan {
+        font-weight: bold;
+        display: inline-block;
+        width: 5%;
+        color: black;
+     }
+
+     .removeButton {
+        font-weight: bold;
+        float: right;
+        /* margin-right: 15%; */
+        color: #871c18;
+        padding: 1px;
+        border: 1px solid #871c18;
+        overflow: auto;
+        width: auto;
+        /* background-color: #c6a5a5; */
+        border-radius: 8%;
+    }
+
+    
+    .userHoursSpan, .userMainHours {
+        /* padding-left: 15%; */
+        margin-left: 15%
+    }
+    
+    .userPaySpan, .userMainPay {
+        margin-left: 5%;
+        /* padding-left: 10%; */
+     }
+    
+    .userMainStatus{
+        /* margin-right: 1%; */
+        font-weight: bold;
+        color: black;
+        float: right;
+     }
+    
+
+}
+
+@media (min-width: 900px) {
     .userPostedEvents, .userAcceptedEvents {
         width: 50%;
         overflow: auto;
+        padding: 0;
     }
+
+    .userAcceptedUl{
+        font-size: 17px;
+    }
+    .userPostedUl{
+        font-size: 17px;
+    }
+
 }
+
+/* @media (min-width: 1400px) {
+    .userPostedEvents, .userAcceptedEvents {
+        width: 50%;
+        overflow: auto;
+        padding: 0;
+    }
+
+} */

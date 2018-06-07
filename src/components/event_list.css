@@ -1,8 +1,10 @@
 .fullEventList {
     display: inline-block;
-    border: 0.5em solid black;
+    border: 0.3em solid black;
     width: 100%;
+    background:rgba(255,255,255,0.5);
 }
+
  .eventUlList {
     padding: 0;
     text-align: left;
@@ -11,4 +13,45 @@
 
  .eventListItem {
     line-height: 1.6;
+ }
+
+.mainTitle, .mainHours, .mainPay, mainStatus {
+    font-weight: bold;
+    display: inline-block;
+    width: 10%;
+    color: black
+}
+
+ .mainStatus{
+    margin-right: 11.5%;
+    font-weight: bold;
+    color: black;
+    float: right;
+ }
+
+ .titleSpan, .hoursSpan, .paySpan, .acceptButton {
+    font-weight: bold;
+    display: inline-block;
+    width: 10%;
+    color: black
+ }
+
+ .hoursSpan, .mainHours {
+     padding-left: 15%;
+ }
+
+.paySpan, .mainPay {
+    padding-left: 15%;
+ }
+
+
+ .acceptButton {
+     float: right;
+     margin-right: 5%;
+     color: green;
+     padding: 5px;
+     border: 2px solid green;
+     overflow: auto;
+     border-radius: 7%;
+     width: auto;
  }
