@@ -3,11 +3,13 @@ import {connect} from 'react-redux';
 import {Route, withRouter} from 'react-router-dom';
 
 // import HeaderBar from './header-bar';
-import Main from './main_page';
+import Loginpage from './login_page';
 import Userpage from './user_page';
 import Events from './event_page';
 import RegistrationPage from './registration_page';
+import Landingpage from './landing_page'
 import {refreshAuthToken, clearAuth} from '../actions/auth';
+import './app.css';
 
 
 export class App extends React.Component {
@@ -75,19 +77,10 @@ export class App extends React.Component {
     // }
 
     render() {
-        // let UserpageRoute, EventsRoute
-        // if(this.props.loggedIn) {
-        //     UserpageRoute = <Route exact path="/user" component={Userpage} />;
-        //     EventsRoute = <Route exact path="/events" component={Events} />;
-        // } else {
-        //     UserpageRoute =  <Route exact path="/user"  component={Main} />
-        //     EventsRoute = <Route exact path="/events" component={Main} />
-        // }
         return (
             <div className="app">
-                <Route exact path="/" component={Main} />
-                {/* {UserpageRoute}
-                {EventsRoute} */}
+                <Route exact path="/" component={Landingpage} />
+                <Route exact path="/login" component={Loginpage} />
                 <Route exact path="/user" component={Userpage} />
                 <Route exact path="/events" component={Events} />
                 <Route exact path="/register" component={RegistrationPage} />

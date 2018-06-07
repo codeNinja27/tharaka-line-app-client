@@ -48,12 +48,10 @@
 
 .removeButton {
     float: right;
-    /* margin-right: 15%; */
     color: #871c18;
     padding: 5px;
     border: 2px solid #871c18;
     overflow: auto;
-    /* background-color: #c6a5a5; */
     border-radius: 8%;
     width: auto;
 }
@@ -80,9 +78,11 @@ span {
     }
     .userAcceptedUl{
         font-size: 10px;
+
     }
     .userPostedUl{
         font-size: 10px;
+
     }
 
     .userMainTitle, .userMainHours, .userMainPay, userMainStatus {
@@ -102,29 +102,31 @@ span {
      .removeButton {
         font-weight: bold;
         float: right;
-        /* margin-right: 15%; */
-        color: #871c18;
-        padding: 1px;
+        color:red;
+        background-color: red;
+        padding: 8px;
         border: 1px solid #871c18;
         overflow: auto;
-        width: auto;
-        /* background-color: #c6a5a5; */
-        border-radius: 8%;
+        width: 1%;
+        border-radius: 10%;
+    }
+
+    .removeButton:hover {
+        background-color: red;
+        color: red;
+        cursor: pointer;
     }
 
     
     .userHoursSpan, .userMainHours {
-        /* padding-left: 15%; */
         margin-left: 15%
     }
     
     .userPaySpan, .userMainPay {
         margin-left: 5%;
-        /* padding-left: 10%; */
      }
     
     .userMainStatus{
-        /* margin-right: 1%; */
         font-weight: bold;
         color: black;
         float: right;
@@ -133,9 +135,45 @@ span {
 
 }
 
-@media (min-width: 900px) {
+@media (min-width: 600px) {
     .userPostedEvents, .userAcceptedEvents {
-        width: 50%;
+        width: 100%;
+        overflow: auto;
+        padding: 0;
+    }
+
+    .userAcceptedUl{
+        font-size: 13px;
+    }
+    .userPostedUl{
+        font-size: 13px;
+    }
+    .removeButton {
+        font-weight: bold;
+        float: right;
+        /* margin-right: 15%; */
+        color: #871c18;
+        padding: 8px;
+        border: 1px solid #871c18;
+        overflow: auto;
+        width: auto;
+        background-color: white;
+        border-radius: 8%;
+        transition: all 0.3s ease;
+    }
+
+    .removeButton:hover {
+        background-color: #871c18;
+        color: white;
+        cursor: pointer;
+    }
+
+
+}
+
+@media (min-width: 1080px) {
+    .userPostedEvents, .userAcceptedEvents {
+        width: 49.5%;
         overflow: auto;
         padding: 0;
     }
@@ -146,14 +184,27 @@ span {
     .userPostedUl{
         font-size: 17px;
     }
+    .removeButton {
+        font-weight: bold;
+        float: right;
+        /* margin-right: 15%; */
+        color: #871c18;
+        background-color: white;
+        padding: 8px;
+        border: 1px solid #871c18;
+        overflow: auto;
+        width: auto;
+        /* background-color: #c6a5a5; */
+        border-radius: 8%;
+        transition: all 0.3s ease;
+    }
+
+    .removeButton:hover {
+        background-color: #871c18;
+        color: white;
+        cursor: pointer;
+    }
+
 
 }
 
-/* @media (min-width: 1400px) {
-    .userPostedEvents, .userAcceptedEvents {
-        width: 50%;
-        overflow: auto;
-        padding: 0;
-    }
-
-} */

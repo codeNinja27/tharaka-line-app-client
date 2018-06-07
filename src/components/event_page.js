@@ -38,19 +38,6 @@ export class EventPage extends React.Component {
     }
 }
 
-// export function EventPage(props) {
-//     // If we are logged in (which happens automatically when registration
-//     // is successful) redirect to the user's dashboard
-//     if (props.loggedIn) {
-//         return <Redirect to="/user" />;//Events or Userpage
-//     }
-//     return (
-//         <div className="userHome">
-//             <h2>Events</h2>
-//         </div>
-//     );
-// }
-
 const mapStateToProps = state => ({
     loggedIn: state.auth.currentUser !== null
 });

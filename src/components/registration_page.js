@@ -5,16 +5,15 @@ import './registration_page.css';
 import RegistrationForm from './registration_form';
 
 export function RegistrationPage(props) {
-    // If we are logged in (which happens automatically when registration
-    // is successful) redirect to the user's dashboard
+
     if (props.loggedIn) {
-        return <Redirect to="/user" />;//Events or Userpage
+        return <Redirect to="/user" />;
     }
     return (
         <div className="registrationContainer">
             <h2>Register</h2>
             <RegistrationForm />
-            <Link className="loginLink" to="/">Login</Link>
+            <Link className="loginLink" to="/login">Login</Link>
         </div>
     );
 }

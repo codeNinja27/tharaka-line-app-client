@@ -9,6 +9,7 @@
     padding: 0;
     text-align: left;
     overflow: auto;
+    font-size: 10px;
  }
 
  .eventListItem {
@@ -23,7 +24,7 @@
 }
 
  .mainStatus{
-    margin-right: 11.5%;
+    margin-right: 6%;
     font-weight: bold;
     color: black;
     float: right;
@@ -49,9 +50,25 @@
      float: right;
      margin-right: 5%;
      color: green;
-     padding: 5px;
+     padding: 8px;
      border: 2px solid green;
      overflow: auto;
      border-radius: 7%;
      width: auto;
+     transition: all 0.3s ease;
  }
+
+ .acceptButton:hover {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+ }
+
+ @media (min-width: 900px) {
+    .eventUlList {
+        padding: 0;
+        text-align: left;
+        overflow: auto;
+        font-size: 17px;
+     }
+}

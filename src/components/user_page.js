@@ -20,7 +20,7 @@ export class UserPage extends React.Component {
     render() {
         // if (this.props.loggedIn) {
         //     return <Redirect to="/user" />;
-        // } else {
+        // } else if(!this.props.loggedIn){
         //     return <Redirect to="/" />;
         // }
         if (!this.props.loggedIn) {
