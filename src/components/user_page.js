@@ -18,9 +18,15 @@ export class UserPage extends React.Component {
     }
 
     render() {
-        if (this.props.loggedIn) {
-            return <Redirect to="/user" />;//Events or Userpage
+        // if (this.props.loggedIn) {
+        //     return <Redirect to="/user" />;
+        // } else {
+        //     return <Redirect to="/" />;
+        // }
+        if (!this.props.loggedIn) {
+            return <Redirect to="/" />;
         }
+            
         return (
             <div className="userHome">
                 
@@ -40,7 +46,7 @@ export class UserPage extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    // loggedIn: state.auth.currentUser !== null
+    loggedIn: state.auth.currentUser !== null
 });
 
 export default connect(mapStateToProps)(UserPage);

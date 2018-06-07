@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import EventList from './event_list';
 import {logout} from '../actions/auth';
 import './event_page.css';
@@ -13,10 +13,15 @@ export class EventPage extends React.Component {
     }
 
     render() {
-        //have a map function go through all the events and put it in li
         // if (this.props.loggedIn) {
-        //     return <Redirect to="/user" />;//Events or Userpage
+        //     return <Redirect to="/events" />;
+        // } else {
+        //     return <Redirect to="/" />;
         // }
+        if (!this.props.loggedIn) {
+            return <Redirect to="/" />;
+        } 
+
         return (
             <div className="userHome">
                 <div className="headerDiv">
@@ -47,7 +52,7 @@ export class EventPage extends React.Component {
 // }
 
 const mapStateToProps = state => ({
-    // loggedIn: state.auth.currentUser !== null
+    loggedIn: state.auth.currentUser !== null
 });
 
 export default connect(mapStateToProps)(EventPage);

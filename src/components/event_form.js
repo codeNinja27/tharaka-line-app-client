@@ -69,7 +69,7 @@ export class EventForm extends React.Component {
                         id="pay"
                         validate={[required, nonEmpty]}
                     />                
-                    <button disabled={this.props.pristine || this.props.submitting}>
+                    <button className="eventPostButton" disabled={this.props.pristine || this.props.submitting}>
                         Post
                     </button>
                 </form>

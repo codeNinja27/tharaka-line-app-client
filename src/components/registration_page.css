@@ -1,3 +1,10 @@
 .registrationContainer {
     text-align: center;
+    line-height: 1.6;
+}
+
+.loginLink {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
 }

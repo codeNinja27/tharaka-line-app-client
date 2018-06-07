@@ -1,3 +1,13 @@
 /* .eventFormContainer {
     margin-left: 5px;
 } */
+
+.eventPostButton {
+    margin: 1%;
+    padding: 5px;
+    border-radius: 7%;
+    width: auto;
+    color:gray;
+    border: 2px solid gray;
+    overflow: auto;
+}

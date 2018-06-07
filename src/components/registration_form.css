@@ -1,0 +1,9 @@
+.registrationButton {
+    margin: 1%;
+    padding: 5px;
+    border-radius: 7%;
+    width: auto;
+    color:green;
+    border: 2px solid green;
+    overflow: auto;
+}

@@ -1,3 +1,10 @@
 .loginPage {
     text-align: center;
+    line-height: 1.6;
+}
+
+.registerLink {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
 }
