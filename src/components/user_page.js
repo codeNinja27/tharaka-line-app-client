@@ -4,16 +4,23 @@ import {Link, Redirect} from 'react-router-dom';
 import UserEventList from './user_event_list';
 import EventForm from './event_form';
 import {logout} from '../actions/auth';
+import {loadAuthToken } from '../local-storage';
 import './user_page.css';
 import logo from '../logo.png';
 
 export class UserPage extends React.Component {
+    componentDidMount(){
+        //when you refresh the page logged in prop will always set to false.
+        //grab the auth token from local storage 
+    }
+
     logOut() {
         this.props.dispatch(logout());
     }
-
     render() {
-        if (!this.props.loggedIn) {
+        const authTokenUser = loadAuthToken(); 
+
+        if(authTokenUser === null) {
             return <Redirect to="/" />;
         } 
             

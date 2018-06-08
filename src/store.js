@@ -13,13 +13,13 @@ const store = createStore(
         form: formReducer,
         auth: authReducer,
         event: eventReducer
-        // protectedData: protectedDataReducer
     }),
     applyMiddleware(thunk)
 );
 
 // Hydrate the authToken from localStorage if it exist
 const authToken = loadAuthToken();
+
 if (authToken) {
     const token = authToken;
     store.dispatch(setAuthToken(token));

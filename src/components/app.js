@@ -50,10 +50,10 @@ export class App extends React.Component {
     }
 
     
-    componentDidMount() {
+    componentDidMount() {//put the auth token from local storage in store
         setTimeout(() => {
             this.props.dispatch(clearAuth())
-        }, 60 * 1000 * 20)
+        }, 60 * 1000 * 20);
     }
 
     componentWillUnmount() {//AutoLogout here?

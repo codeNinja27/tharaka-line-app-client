@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 import EventList from './event_list';
 import {logout} from '../actions/auth';
+import {loadAuthToken } from '../local-storage';
 import './event_page.css';
 import logo from '../logo.png';
 
@@ -13,7 +14,8 @@ export class EventPage extends React.Component {
     }
 
     render() {
-        if (!this.props.loggedIn) {
+        const authTokenEvents = loadAuthToken(); 
+        if (authTokenEvents === null) {
             return <Redirect to="/" />;
         } 
 

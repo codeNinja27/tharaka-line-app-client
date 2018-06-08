@@ -42,6 +42,7 @@ const storeAuthInfo = (authToken, dispatch) => {
     saveAuthToken(authToken);//to store the token in local storage
 };
 
+
 export const login = (username, password) => dispatch => {
     dispatch(authRequest());
     return (
