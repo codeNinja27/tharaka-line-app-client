@@ -5,19 +5,33 @@ This is an app where users can wait in lines for each other. Instead of wasting 
 
 
 ### Tech Stack:
-I used react, redux, css, javascript for front end. Used Node JS for back end. Used Netlify and Heroku to deploy the app and mLab as the databse. 
+Client
+* React, Redux, CSS, Javascript, React-Router, React-Form, Redux-Thunk.
+API
+* Node JS, Express, Passport, Json Web Token.
+Database
+* mLab.
+Deployment
+* Heroku, Netlify
 
 ### Key Parts:
-
 Client
-* Landing page:       landing_page.js
-* Login page:         login_page.js
-* Registration page:  registration_page.js
-* User page:          user_page.js
-* All events:         event_page.js
+* Landing page:       /src/components/landing_page.js
+* Login page:         /src/components/login_page.js
+* Registration page:  /src/components/registration_page.js
+* User page:          /src/components/user_page.js
+* All events:         /src/components/event_page.js
+* All actions:        /src/actions
+* All reducers:       /src/reducers
 
 Server
-* Authentication(login):   auth file
-* All the events handling: events file
-* ALl the user handling:   user file
+* Authentication(login):   auth/router.js
+* All the events handling: events/router.js
+* All the user handling:   user/router.js
+* User model:              users/models.js
+* Event model:             events/models.js
+* config file:             config.js
+* server file:             server.js
+
+
 
