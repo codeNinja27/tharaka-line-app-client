@@ -35,7 +35,28 @@ Server
 
 
 
+### Landing Page
 <a href="http://www.freeimagehosting.net/commercial-photography/"><img src="https://i.imgur.com/0570EpG.png" alt="Commercial Photography"></a>
+
+### Sign In Page
+<a href="http://www.freeimagehosting.net/commercial-photography/"><img src="https://i.imgur.com/ez1dgHe.png" alt="Commercial Photography"></a>
+
+### Login Page
+<a href="http://www.freeimagehosting.net/commercial-photography/"><img src="https://i.imgur.com/OunsSH8.png" alt="Commercial Photography"></a>
+
+### User Page
+<a href="http://www.freeimagehosting.net/commercial-photography/"><img src="https://i.imgur.com/iZhIJz4.png" alt="Commercial Photography"></a>
+
+### All Events
+<a href="http://www.freeimagehosting.net/commercial-photography/"><img src="https://i.imgur.com/NNwwo8F.jpg" alt="Commercial Photography"></a>
+
+
+Test User
+username: testuser
+password: baseball1234
+
+
+
 
 
 
