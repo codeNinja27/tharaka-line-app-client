@@ -7,25 +7,15 @@ import {logout} from '../actions/auth';
 import './user_page.css';
 import logo from '../logo.png';
 
-// import RegistrationForm from './registration_form';
-
 export class UserPage extends React.Component {
-
-    // If we are logged in (which happens automatically when registration
-    // is successful) redirect to the user's dashboard
     logOut() {
         this.props.dispatch(logout());
     }
 
     render() {
-        // if (this.props.loggedIn) {
-        //     return <Redirect to="/user" />;
-        // } else if(!this.props.loggedIn){
-        //     return <Redirect to="/" />;
-        // }
         if (!this.props.loggedIn) {
             return <Redirect to="/" />;
-        }
+        } 
             
         return (
             <div className="userHome">

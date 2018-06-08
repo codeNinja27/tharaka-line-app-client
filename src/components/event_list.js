@@ -17,35 +17,6 @@ export class EventList extends React.Component {
 
     render() {
 
-        // const events = this.props.event.events.map((singleEvent, index) => { //Wrong way to do it
-        //    if(this.props.currentUser && singleEvent.userId) {
-        //         if((singleEvent.acceptUserId === null || singleEvent.acceptUserId === undefined || singleEvent.acceptUserId === "") && (this.props.currentUser._id !== singleEvent.userId)) {
-        //             const item =  
-        //                 <div key={index}>
-        //                     <li key={index}>
-        //                         <span>title: {singleEvent.title}</span>
-        //                         <span>hours: {singleEvent.hours}</span>
-        //                         <span>pay: {singleEvent.pay}</span>
-        //                     </li> 
-        //                     {!singleEvent.acceptUserId && 
-        //                         <button onClick={ () => { this.onEventClick(singleEvent)} }>Accept</button>
-        //                     }
-        //                 </div>;
-        //             return item
-        //         } else {
-        //             const item =  
-        //                 <div key={index}>
-        //                     <li key={index}>
-        //                         <span>title: {singleEvent.title}</span>
-        //                         <span>hours: {singleEvent.hours}</span>
-        //                         <span>pay: {singleEvent.pay}</span>
-        //                     </li> 
-        //                 </div>
-        //             return item                
-        //         }
-        //    }
-
-        // });
         const events = this.props.events.map((singleEvent, index) => {
             return (
                 <li className="eventListItem" key={index}>

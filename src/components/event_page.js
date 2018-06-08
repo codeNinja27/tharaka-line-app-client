@@ -13,11 +13,6 @@ export class EventPage extends React.Component {
     }
 
     render() {
-        // if (this.props.loggedIn) {
-        //     return <Redirect to="/events" />;
-        // } else {
-        //     return <Redirect to="/" />;
-        // }
         if (!this.props.loggedIn) {
             return <Redirect to="/" />;
         } 
