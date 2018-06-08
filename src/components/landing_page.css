@@ -1,0 +1,42 @@
+.landingPage {
+    width: 100%;
+}
+
+.landingTitle {
+    color: #7c2f1d;
+}
+
+.appDescription {
+    text-align: center;
+    background:rgba(255,255,255,0.5);
+    border: 0.3em solid black;
+}
+
+.desc {
+    color: #7c2f1d;
+    font-size: 20px;
+}
+
+.loginDesc {
+    font-size: 17px;
+    font-weight: bold
+}
+
+.landingLoginLink, .landingRegisterinLink{ 
+    text-decoration: none;
+    color: green;
+}
+
+.landingLogoDiv {
+    width: auto;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.landingLoginLink img {
+    max-width:100%;
+    max-height:100%;
+}
+

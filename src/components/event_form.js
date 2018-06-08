@@ -45,26 +45,29 @@ export class EventForm extends React.Component {
                     )}>
                     {successMessage}
                     {errorMessage}
-                    <label htmlFor="title">Title</label>
+                    {/* <label htmlFor="title">Title</label> */}
                     <Field
                         component={Input}
                         type="text"
+                        placeholder="Title"
                         name="title"
                         id="title"
                         validate={[required, nonEmpty]}
                     />
-                    <label htmlFor="hours">Hours</label>
+                    {/* <label htmlFor="hours">Hours</label> */}
                     <Field
                         component={Input}
                         type="hours"
+                        placeholder="Hours"
                         name="hours"
                         id="hours"
                         validate={[required, nonEmpty]}
                     />
-                    <label htmlFor="pay">Pay</label>
+                    {/* <label htmlFor="pay">Pay</label> */}
                     <Field
                         component={Input}
                         type="pay"
+                        placeholder="Pay"
                         name="pay"
                         id="pay"
                         validate={[required, nonEmpty]}

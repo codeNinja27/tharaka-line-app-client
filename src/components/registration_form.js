@@ -25,31 +25,34 @@ export class RegistrationForm extends React.Component {
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
                 )}>
-                <label htmlFor="firstName">First name</label>
-                <Field component={Input} type="text" name="firstName" />
-                <label htmlFor="lastName">Last name</label>
-                <Field component={Input} type="text" name="lastName" />
-                <label htmlFor="email">Email address</label>
-                <Field component={Input} type="text" name="email" />
+                {/* <label htmlFor="firstName">First name</label> */}
+                <Field component={Input} type="text" placeholder="First Name" name="firstName" />
+                {/* <label htmlFor="lastName">Last name</label> */}
+                <Field component={Input} type="text" placeholder="Last Name" name="lastName" />
+                {/* <label htmlFor="email">Email address</label> */}
+                <Field component={Input} type="text" placeholder="Email Address" name="email" />
 
-                <label htmlFor="username">Username</label>
+                {/* <label htmlFor="username">Username</label> */}
                 <Field
                     component={Input}
                     type="text"
+                    placeholder="Username"
                     name="username"
                     validate={[required, nonEmpty, isTrimmed]}
                 />
-                <label htmlFor="password">Password</label>
+                {/* <label htmlFor="password">Password</label> */}
                 <Field
                     component={Input}
                     type="password"
+                    placeholder="Password"
                     name="password"
                     validate={[required, passwordLength, isTrimmed]}
                 />
-                <label htmlFor="passwordConfirm">Confirm password</label>
+                {/* <label htmlFor="passwordConfirm">Confirm password</label> */}
                 <Field
                     component={Input}
                     type="password"
+                    placeholder="Confirm Password"
                     name="passwordConfirm"
                     validate={[required, nonEmpty, matchesPassword]}
                 />

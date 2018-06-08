@@ -11,9 +11,10 @@ export function loginPage(props) {
 
     return (
         <div className="loginPage">
-            <h2>Welcome to Line App</h2>
+            <h2>Login</h2>
             <LoginForm />
             <Link className="registerLink" to="/register">Register</Link>
+            <span className="spacer">||</span>
             <Link className="landingLink" to="/">Landing Page</Link>
         </div>
     );

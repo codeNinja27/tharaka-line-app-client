@@ -3,13 +3,15 @@
     line-height: 1.6;
 }
 
-.registerLink, .landingLink{
+.registerLink, .landingLink {
     margin: 0.5%;
     text-decoration: none;
     color: green;
     font-weight: bold;
-    /* border: 1px solid green;
-    background-color: yellow;
-    border-radius: 7%; */
-    /* text-shadow: 10px black; */
+    text-decoration-line: underline;
+}
+
+.spacer {
+    margin: 0%;
+    color: black;
 }
