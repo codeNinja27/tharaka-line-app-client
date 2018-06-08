@@ -11,7 +11,16 @@ export const length = length => value => {
         return `Must be at most ${length.max} characters long`;
     }
 };
-export const matches = field => (value, allValues) =>
+export const matches = field => (value, allValues) => {
     field in allValues && value.trim() === allValues[field].trim()
         ? undefined
         : 'Does not match';
+}
+
+export const email = value => 
+  value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
+    ? 'Invalid email address'
+    : undefined
+
+export const isNum = value => 
+    value.match(/^-{0,1}\d+$/) ? undefined : 'Only Numbers Allowed'

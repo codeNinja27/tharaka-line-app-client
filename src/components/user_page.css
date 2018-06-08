@@ -26,7 +26,13 @@ h2 {
 
 .eventForm {
     text-align: center;
-    margin-top: 100px;;
+    /* margin-top: 30%; */
+    /* display: inline-block; */
+    clear: both;
+}
+
+.userEventList {
+    padding-bottom: 5%;
 }
 
 .logoDiv {

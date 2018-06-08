@@ -3,7 +3,7 @@ import {Field, reduxForm, focus} from 'redux-form';
 import {registerUser} from '../actions/users';
 import {login} from '../actions/auth';
 import Input from './input';
-import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
+import {required, nonEmpty, matches, length, isTrimmed, email} from '../validators';
 import './registration_form.css';
 
 const passwordLength = length({min: 10, max: 72});
@@ -25,14 +25,14 @@ export class RegistrationForm extends React.Component {
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
                 )}>
-                {/* <label htmlFor="firstName">First name</label> */}
+            
                 <Field component={Input} type="text" placeholder="First Name" name="firstName" />
-                {/* <label htmlFor="lastName">Last name</label> */}
+            
                 <Field component={Input} type="text" placeholder="Last Name" name="lastName" />
-                {/* <label htmlFor="email">Email address</label> */}
-                <Field component={Input} type="text" placeholder="Email Address" name="email" />
+            
+                <Field component={Input} type="text" placeholder="Email Address" name="email" validate={[email]} />
 
-                {/* <label htmlFor="username">Username</label> */}
+        
                 <Field
                     component={Input}
                     type="text"
@@ -40,7 +40,7 @@ export class RegistrationForm extends React.Component {
                     name="username"
                     validate={[required, nonEmpty, isTrimmed]}
                 />
-                {/* <label htmlFor="password">Password</label> */}
+           
                 <Field
                     component={Input}
                     type="password"
@@ -48,7 +48,7 @@ export class RegistrationForm extends React.Component {
                     name="password"
                     validate={[required, passwordLength, isTrimmed]}
                 />
-                {/* <label htmlFor="passwordConfirm">Confirm password</label> */}
+           
                 <Field
                     component={Input}
                     type="password"

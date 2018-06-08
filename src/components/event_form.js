@@ -2,7 +2,7 @@ import React from 'react';
 import {Field, reduxForm, focus} from 'redux-form';
 import Input from './input';
 import {postEvents} from '../actions/events';
-import {required, nonEmpty} from '../validators';
+import {required, nonEmpty, isNum} from '../validators';
 import './event_form.css';
 
 export class EventForm extends React.Component {
@@ -61,7 +61,7 @@ export class EventForm extends React.Component {
                         placeholder="Hours"
                         name="hours"
                         id="hours"
-                        validate={[required, nonEmpty]}
+                        validate={[required, nonEmpty, isNum]}
                     />
                     {/* <label htmlFor="pay">Pay</label> */}
                     <Field
@@ -70,7 +70,7 @@ export class EventForm extends React.Component {
                         placeholder="Pay"
                         name="pay"
                         id="pay"
-                        validate={[required, nonEmpty]}
+                        validate={[required, nonEmpty, isNum]}
                     />                
                     <button className="eventPostButton" disabled={this.props.pristine || this.props.submitting}>
                         Post

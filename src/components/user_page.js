@@ -33,7 +33,10 @@ export class UserPage extends React.Component {
                     <div className="logoDiv" ><img src={logo} alt="logo" /></div>
                 </div>
                 <h2>My Events</h2>
-                <UserEventList />
+                <div className="userEventList">
+                    <UserEventList />   
+                </div>
+            
                 <div className="eventForm">
                     <EventForm />
                 </div>
