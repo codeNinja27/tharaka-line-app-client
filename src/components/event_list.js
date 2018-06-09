@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-// import {Link, Redirect} from 'react-router-dom';
 import { getEvents } from '../actions/events';
 import {acceptUserEvents} from '../actions/events';
 import './event_list.css';

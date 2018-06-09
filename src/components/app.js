@@ -33,8 +33,6 @@ export class App extends React.Component {
     componentDidUpdate(prevProps) {
         
         if (!prevProps.loggedIn && this.props.loggedIn) {
-            // When we are logged in, refresh the auth token periodically
-
             this.startPeriodicRefresh();
 
             setTimeout(() => {
@@ -48,13 +46,13 @@ export class App extends React.Component {
     }
 
     
-    componentDidMount() {//put the auth token from local storage in store
+    componentDidMount() {
         setTimeout(() => {
             this.props.dispatch(clearAuth())
         }, 60 * 1000 * 20);
     }
 
-    componentWillUnmount() {//AutoLogout here?
+    componentWillUnmount() {
         this.stopPeriodicRefresh();
 
     }
@@ -77,6 +75,5 @@ const mapStateToProps = state => ({
     loggedIn: state.auth.currentUser !== null
 });
 
-// Deal with update blocking - https://reacttraining.com/react-router/web/guides/dealing-with-update-blocking
 export default withRouter(connect(mapStateToProps)(App));
 

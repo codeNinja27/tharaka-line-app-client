@@ -151,7 +151,6 @@ span {
     .removeButton {
         font-weight: bold;
         float: right;
-        /* margin-right: 15%; */
         color: #871c18;
         padding: 8px;
         border: 1px solid #871c18;
@@ -187,14 +186,12 @@ span {
     .removeButton {
         font-weight: bold;
         float: right;
-        /* margin-right: 15%; */
         color: #871c18;
         background-color: white;
         padding: 8px;
         border: 1px solid #871c18;
         overflow: auto;
         width: auto;
-        /* background-color: #c6a5a5; */
         border-radius: 8%;
         transition: all 0.3s ease;
     }

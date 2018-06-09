@@ -1,15 +1,9 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import logo from '../logo.png';
 import './landing_page.css';
 
 export function landingPage(props) {
-    // If we are logged in redirect straight to the user's dashboard
-    // if (props.loggedIn) {
-    //     return <Redirect to="/user" />;
-    // }
-
     return (
         <div className="landingPage">
             <div className="landingLogoDiv" ><img src={logo} alt="logo" /></div>
@@ -20,14 +14,8 @@ export function landingPage(props) {
                 </p>
                 <p className="loginDesc" >Already have an account? <Link className="landingLoginLink" to="/login">Login here</Link></p>
             </div>
-            {/* <Link className="landingRegisterinLink" to="/register">Register</Link> */}
-            {/* <Link className="landingLoginLink" to="/login">Login here</Link> */}
         </div>
     );
 }
 
-const mapStateToProps = state => ({
-    // loggedIn: state.auth.currentUser !== null
-});
-
-export default connect(mapStateToProps)(landingPage);
+export default landingPage

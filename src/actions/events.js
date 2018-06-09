@@ -39,7 +39,7 @@ export const getEvents = (event) => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
     return fetch(`${API_BASE_URL}/events`, {
         method: 'GET',
-        headers: {//set up authorization token
+        headers: {
             Authorization: `Bearer ${authToken}`,
             'content-type': 'application/json'
         },
@@ -47,11 +47,10 @@ export const getEvents = (event) => (dispatch, getState) => {
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
-        .then(event => dispatch(setEvents(event)))//storing the events in the store
+        .then(event => dispatch(setEvents(event)))
         .catch(err => {
             const {reason, message, location} = err;
             if (reason === 'ValidationError') {
-                // Convert ValidationErrors into SubmissionErrors for Redux Form
                 return Promise.reject(
                     new SubmissionError({
                         [location]: message
@@ -66,18 +65,17 @@ export const getUserEvents = (event) => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
     return fetch(`${API_BASE_URL}/events/user`, {
         method: 'GET',
-        headers: {//set up authorization token
+        headers: {
             Authorization: `Bearer ${authToken}`,
             'content-type': 'application/json'
         },
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
-        .then(events => dispatch(setUserEvents(events)))//storing the events in the store
+        .then(events => dispatch(setUserEvents(events)))
         .catch(err => {
             const {reason, message, location} = err;
             if (reason === 'ValidationError') {
-                // Convert ValidationErrors into SubmissionErrors for Redux Form
                 return Promise.reject(
                     new SubmissionError({
                         [location]: message
@@ -111,7 +109,6 @@ export const postEvents = (title, hours, pay) => (dispatch, getState) => {
         .catch(err => {
             const {reason, message, location} = err;
             if (reason === 'ValidationError') {
-                // Convert ValidationErrors into SubmissionErrors for Redux Form
                 return Promise.reject(
                     new SubmissionError({
                         [location]: message
@@ -127,7 +124,6 @@ export const postEvents = (title, hours, pay) => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
     const id = _id;
    
-    // console.log(title, hours, pay, _id)
     return fetch(`${API_BASE_URL}/events/${id}`, {
         method: 'PATCH',
         headers: {
@@ -147,7 +143,6 @@ export const postEvents = (title, hours, pay) => (dispatch, getState) => {
         .catch(err => {
             const {reason, message, location} = err;
             if (reason === 'ValidationError') {
-                // Convert ValidationErrors into SubmissionErrors for Redux Form
                 return Promise.reject(
                     new SubmissionError({
                         [location]: message
@@ -159,9 +154,8 @@ export const postEvents = (title, hours, pay) => (dispatch, getState) => {
 
 //REMOVE AN EVENT
 export const removeEvents = (_id) => (dispatch, getState) => {
-    // console.log('DELETE')
+
     const authToken = getState().auth.authToken;
-   
     const id = _id;
 
     return fetch(`${API_BASE_URL}/events/${id}`, {
@@ -176,7 +170,6 @@ export const removeEvents = (_id) => (dispatch, getState) => {
     .catch(err => {
         const {reason, message, location} = err;
         if (reason === 'ValidationError') {
-            // Convert ValidationErrors into SubmissionErrors for Redux Form
             return Promise.reject(
                 new SubmissionError({
                     [location]: message

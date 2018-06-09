@@ -12,15 +12,8 @@ export class EventForm extends React.Component {
     }
 
     render() {
-        // let error;
-        // if (this.props.error) {
-        //     error = (
-        //         <div className="form-error" aria-live="polite">
-        //             {this.props.error}
-        //         </div>
-        //     );
-        // }
-        let successMessage;
+    let successMessage;
+
         if (this.props.submitSucceeded) {
             successMessage = (
                 <div className="message message-success elementToFadeInAndOut">
@@ -45,7 +38,7 @@ export class EventForm extends React.Component {
                     )}>
                     {successMessage}
                     {errorMessage}
-                    {/* <label htmlFor="title">Title</label> */}
+                   
                     <Field
                         component={Input}
                         type="text"
@@ -54,7 +47,7 @@ export class EventForm extends React.Component {
                         id="title"
                         validate={[required, nonEmpty]}
                     />
-                    {/* <label htmlFor="hours">Hours</label> */}
+                   
                     <Field
                         component={Input}
                         type="hours"
@@ -63,7 +56,7 @@ export class EventForm extends React.Component {
                         id="hours"
                         validate={[required, nonEmpty, isNum]}
                     />
-                    {/* <label htmlFor="pay">Pay</label> */}
+                  
                     <Field
                         component={Input}
                         type="pay"

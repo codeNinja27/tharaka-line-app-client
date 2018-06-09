@@ -1,7 +1,6 @@
 .userHome {
     display: inline-block;
     width: 100%;
-    /* margin: 10px; */
 }
 
 ul {
@@ -26,8 +25,6 @@ h2 {
 
 .eventForm {
     text-align: center;
-    /* margin-top: 30%; */
-    /* display: inline-block; */
     clear: both;
 }
 

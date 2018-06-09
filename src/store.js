@@ -4,7 +4,6 @@ import thunk from 'redux-thunk';
 import {loadAuthToken } from './local-storage';
 import authReducer from './reducers/auth';
 import eventReducer from './reducers/events';
-// import protectedDataReducer from './reducers/protected-data';
 import {setAuthToken, refreshAuthToken} from './actions/auth';
 
 
@@ -17,7 +16,6 @@ const store = createStore(
     applyMiddleware(thunk)
 );
 
-// Hydrate the authToken from localStorage if it exist
 const authToken = loadAuthToken();
 
 if (authToken) {

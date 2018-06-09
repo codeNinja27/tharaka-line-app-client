@@ -9,10 +9,6 @@ import './user_page.css';
 import logo from '../logo.png';
 
 export class UserPage extends React.Component {
-    componentDidMount(){
-        //when you refresh the page logged in prop will always set to false.
-        //grab the auth token from local storage 
-    }
 
     logOut() {
         this.props.dispatch(logout());
