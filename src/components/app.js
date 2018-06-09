@@ -38,12 +38,10 @@ export class App extends React.Component {
             this.startPeriodicRefresh();
 
             setTimeout(() => {
-                // return <div>Loging out soon</div>
                 console.log('Loging out soon')
             }, 60 * 1000 * 15)
 
         } else if (prevProps.loggedIn && !this.props.loggedIn) {
-            // Stop refreshing when we log out
             this.stopPeriodicRefresh();
         }
 

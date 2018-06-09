@@ -6,8 +6,7 @@ import LoginForm from './login_form';
 
 export function loginPage(props) {
     if (props.loggedIn) {
-        console.log('LOOGGGG')
-        return <Redirect to="/events" />;
+        return <Redirect to="/user" />;
     }
 
     return (

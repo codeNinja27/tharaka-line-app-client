@@ -15,9 +15,12 @@ export class EventPage extends React.Component {
 
     render() {
         const authTokenEvents = loadAuthToken(); 
-        if (authTokenEvents === null) {
-            return <Redirect to="/" />;
-        } 
+
+        if(!this.props.loggedIn) {
+            if (authTokenEvents === null) {
+                return <Redirect to="/" />;
+            } 
+        }
 
         return (
             <div className="userHome">

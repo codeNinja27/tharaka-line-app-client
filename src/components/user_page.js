@@ -18,11 +18,13 @@ export class UserPage extends React.Component {
         this.props.dispatch(logout());
     }
     render() {
-        const authTokenUser = loadAuthToken(); 
+        const authTokenEvents = loadAuthToken(); 
 
-        if(authTokenUser === null) {
-            return <Redirect to="/" />;
-        } 
+        if(!this.props.loggedIn) {
+            if (authTokenEvents === null) {
+                return <Redirect to="/" />;
+            } 
+        }
             
         return (
             <div className="userHome">
