@@ -1,8 +1,15 @@
 # Line-App
 
+#### Live App : https://jolly-torvalds-3b5e5e.netlify.com/
+
+#### Server   : https://line-app-tharaka.herokuapp.com/
+
+#### Client Repository : https://github.com/codeNinja27/tharaka-line-app-client
+
+#### Server Repository : https://github.com/thinkful-ei20/tharaka-line-app-server
+
 ### Description:
 This is an app where users can wait in lines for each other. Instead of wasting time waiting in a line for some event, you can use that time to do something more productive. If you have some free time in your hands you can make some extra cash by waiting in line for someone else. A user can post, accept, login, and delete events.
-
 
 ### Tech Stack:
 Client
