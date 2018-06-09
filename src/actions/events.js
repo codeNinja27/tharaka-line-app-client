@@ -21,7 +21,7 @@ export const createEventSuccess = newEvent => ({
     newEvent
 });
 
-export const REMOVE_EVENT_SUCCESS = 'REMOVE_EVENT_SUCCESS';//get the id of the event in reducer use filter to remove the element by id
+export const REMOVE_EVENT_SUCCESS = 'REMOVE_EVENT_SUCCESS';
 export const removeEventSuccess = eventId => ({
     type: REMOVE_EVENT_SUCCESS,
     eventId
