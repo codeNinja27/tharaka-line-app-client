@@ -113,5 +113,41 @@ describe('Line-App Actions', () => {
 		});
     });
 
+    describe('updatedEventSuccess', () => {
+        it('Should return the action UPDATED_EVENT_SUCCESS', () => {
+            const updatedEvent = {};
+            const action = updatedEventSuccess(updatedEvent);
+            expect(action.type).toEqual(UPDATED_EVENT_SUCCESS);
+            expect(action.updatedEvent).toEqual(updatedEvent);
+		});
+    });
+
+    // describe('getEvents', () => {
+	// 	it('Should dispatch setEvents', () => {
+
+    //         const events = [];
+    //         const user = {username: 'testuser', password:'baseball1234'};
+
+	// 		global.fetch = jest.fn().mockImplementation(() =>
+	// 			Promise.resolve({
+	// 				ok: true,
+	// 				json() {
+	// 					return events;
+	// 				}
+	// 			})
+	// 		)
+    //         const dispatch = jest.fn();
+    //         const getState = jest.fn();
+
+    //         dispatch(login(user)) 
+    //         .then(() => {
+    //             return getEvents(events)(dispatch).then(() => {
+    //                 expect(fetch).toHaveBeenCalledWith(`${API_BASE_URL}/events`);
+    //                 expect(dispatch).toHaveBeenCalledWith(setEvents(events));
+    //             });
+    //         });
+	// 	});
+	// });
+
     
 });
