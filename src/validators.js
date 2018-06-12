@@ -15,7 +15,7 @@ export const matches = field => (value, allValues) => {
     if(field in allValues && value.trim() === allValues[field].trim()) {
         return undefined;
     } else {
-        return 'Passwords does not match';
+        return 'Does not match';
     }
 };
 
