@@ -7,6 +7,8 @@ import {required, nonEmpty, matches, length, isTrimmed, email} from '../validato
 import './registration_form.css';
 
 const passwordLength = length({min: 10, max: 72});
+const usernameLength = length({min: 1, max: 20});
+// let matchesPassword
 const matchesPassword = matches('password');
 
 export class RegistrationForm extends React.Component {
@@ -38,7 +40,7 @@ export class RegistrationForm extends React.Component {
                     type="text"
                     placeholder="Username"
                     name="username"
-                    validate={[required, nonEmpty, isTrimmed]}
+                    validate={[required, nonEmpty, isTrimmed, usernameLength]}
                 />
            
                 <Field

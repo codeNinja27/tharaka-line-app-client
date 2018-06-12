@@ -12,10 +12,12 @@ export const length = length => value => {
     }
 };
 export const matches = field => (value, allValues) => {
-    field in allValues && value.trim() === allValues[field].trim()
-        ? undefined
-        : 'Does not match';
-}
+    if(field in allValues && value.trim() === allValues[field].trim()) {
+        return undefined;
+    } else {
+        return 'Passwords does not match';
+    }
+};
 
 export const email = value => 
   value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
